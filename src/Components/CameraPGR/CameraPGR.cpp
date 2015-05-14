@@ -119,8 +119,7 @@ namespace CameraPGR {
 			registerStream("out_img", &out_img);
 			registerStream("out_info", &out_info);
 			// Register handlers
-			h_onConfigChanged.setup(boost::bind(&CameraPGR_Source::onNewConfig, this));
-			registerHandler("onConfigChanged", &h_onConfigChanged);
+			registerHandler("onConfigChanged", boost::bind(&CameraPGR_Source::onNewConfig, this));
 			addDependency("onConfigChanged", &configChange);
 
 		}

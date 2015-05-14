@@ -85,8 +85,6 @@ protected:
 	Base::DataStreamOut<cv::Mat> out_img;
 	Base::DataStreamOut<string> out_info;
 
-	// Handlers
-	Base::EventHandler2 h_onConfigChanged;
 	// Properties
 	Base::Property<string> camera_url;
 	Base::Property<unsigned int> camera_serial;
